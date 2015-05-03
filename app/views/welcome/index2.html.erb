@@ -1,0 +1,12 @@
+<%=# form_for @code, new_code_path do |f|%>
+  <%=# f.text_area :code_text %>
+  <%=# f.submit %>
+<%# end %>
+
+<% console %>
+
+
+
+<% @output.each do |line| %>
+  <% x = line.gsub(\/, "") %>
+<% end %>

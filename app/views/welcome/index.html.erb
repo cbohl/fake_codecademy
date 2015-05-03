@@ -1,0 +1,22 @@
+<form action = "/", method = "get">
+  <textarea name = "code"></textarea>
+  <input type = "submit"></input>
+</form>
+
+<table>
+<% if @output != [] %>
+  <%= "Code" %>
+  <% @output.each do |line| %>
+    <tr>
+      <td> <%= line %> </td>
+    </tr>
+  <% end %>
+<% end %>
+<% if @errors != [] %>
+  <%= "Errors" %>
+  <% @errors.each do |line| %>
+    <tr>
+      <td> <%= line %> </td>
+    </tr>
+  <% end %>
+<% end %>
