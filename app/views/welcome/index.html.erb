@@ -1,18 +1,17 @@
 <form action = "/", method = "get">
-  <textarea name = "code"></textarea>
+  <textarea name = "code"><%= @input %></textarea>
   <input type = "submit"></input>
 </form>
 
 <table>
-<% if @output != [] %>
-  <%= "Code" %>
+<% if @output && @output != [] %>
   <% @output.each do |line| %>
     <tr>
       <td> <%= line %> </td>
     </tr>
   <% end %>
 <% end %>
-<% if @errors != [] %>
+<% if @errors && @errors != [] %>
   <%= "Errors" %>
   <% @errors.each do |line| %>
     <tr>
